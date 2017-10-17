@@ -1,4 +1,4 @@
-package soundsystem;
+package soundsystem.mediaplayer;
 
 import static org.junit.Assert.*;
 
@@ -9,6 +9,10 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import config.CDPlayerConfig;
+import soundsystem.compactdisc.CompactDisc;
+import soundsystem.mediaplayer.MediaPlayer;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
