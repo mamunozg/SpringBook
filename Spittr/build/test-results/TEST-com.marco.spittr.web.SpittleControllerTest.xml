@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.marco.spittr.web.SpittleControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-10-24T12:00:04" hostname="MAMUNOZGP7W" time="0.181">
+  <properties/>
+  <testcase name="shouldShowPagedSpittles" classname="com.marco.spittr.web.SpittleControllerTest" time="0.118"/>
+  <testcase name="shouldShowRecentSpittles" classname="com.marco.spittr.web.SpittleControllerTest" time="0.032"/>
+  <testcase name="testSpittle" classname="com.marco.spittr.web.SpittleControllerTest" time="0.031"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping registerHandlerMethod
+INFORMACIÓN: Mapped "{[/spittles],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.marco.spittr.web.SpittleController.spittles(long,int,org.springframework.ui.Model)
+oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping registerHandlerMethod
+INFORMACIÓN: Mapped "{[/spittles/{spittleId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.marco.spittr.web.SpittleController.spittle(long,org.springframework.ui.Model)
+oct 24, 2017 2:00:04 PM org.springframework.mock.web.MockServletContext log
+INFORMACIÓN: Initializing Spring FrameworkServlet ''
+oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
+INFORMACIÓN: FrameworkServlet '': initialization started
+oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
+INFORMACIÓN: FrameworkServlet '': initialization completed in 0 ms
+oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping registerHandlerMethod
+INFORMACIÓN: Mapped "{[/spittles],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.marco.spittr.web.SpittleController.spittles(long,int,org.springframework.ui.Model)
+oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping registerHandlerMethod
+INFORMACIÓN: Mapped "{[/spittles/{spittleId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.marco.spittr.web.SpittleController.spittle(long,org.springframework.ui.Model)
+oct 24, 2017 2:00:04 PM org.springframework.mock.web.MockServletContext log
+INFORMACIÓN: Initializing Spring FrameworkServlet ''
+oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
+INFORMACIÓN: FrameworkServlet '': initialization started
+oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
+INFORMACIÓN: FrameworkServlet '': initialization completed in 0 ms
+oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping registerHandlerMethod
+INFORMACIÓN: Mapped "{[/spittles],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.marco.spittr.web.SpittleController.spittles(long,int,org.springframework.ui.Model)
+oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping registerHandlerMethod
+INFORMACIÓN: Mapped "{[/spittles/{spittleId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.marco.spittr.web.SpittleController.spittle(long,org.springframework.ui.Model)
+oct 24, 2017 2:00:04 PM org.springframework.mock.web.MockServletContext log
+INFORMACIÓN: Initializing Spring FrameworkServlet ''
+oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
+INFORMACIÓN: FrameworkServlet '': initialization started
+oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
+INFORMACIÓN: FrameworkServlet '': initialization completed in 0 ms
+]]></system-err>
+</testsuite>
