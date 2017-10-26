@@ -1,9 +1,5 @@
 .settings
-
-
-
-
-
+.gradle
 bin
 build
 .classpath
