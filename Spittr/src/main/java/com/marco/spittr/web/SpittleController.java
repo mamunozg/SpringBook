@@ -5,12 +5,15 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.marco.spittr.Spittle;
+import com.marco.spittr.config.exception.DuplicateSpittleException;
+import com.marco.spittr.config.exception.SpittleNotFoundException;
 import com.marco.spittr.data.SpittleRepository;
 
 @Controller
@@ -36,15 +39,33 @@ public class SpittleController {
 	
 	
 	@RequestMapping(value="/{spittleId}", method=RequestMethod.GET)	
-	public String spittle(@PathVariable(value="spittleId") long spittleId, Model  model) {		
-		model.addAttribute("spittle", repository.findOne(spittleId));
+	public String spittle(@PathVariable(value="spittleId") long spittleId, Model  model) {
+		
+		Spittle spittle = repository.findOne(spittleId);
+		if(spittle == null) {
+			throw new SpittleNotFoundException();
+		}
+		
+		model.addAttribute("spittle", spittle);
 		return "spittle";
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
 	  public String saveSpittle(SpittleForm form, Model model) throws Exception {
-	    repository.save(new Spittle(null, form.getMessage(), new Date(), form.getLongitude(), form.getLatitude()));
-	    return "redirect:/spittles";
+		try {
+			repository.save(new Spittle(null, form.getMessage(), new Date(), form.getLongitude(), form.getLatitude()));
+			return "redirect:/spittles";
+		}
+		catch(DuplicateSpittleException e) {
+			return "error/duplicate";
+		}			    
+	    
 	  }
+	
+	@ExceptionHandler(DuplicateSpittleException.class)
+	public String handleDuplicateSpittle() {
+		return "error/duplicate";
+	}
+	
 }
 	

@@ -11,8 +11,8 @@ dependencies {
 	compile "org.hibernate:hibernate-validator:$hibernateValidatorVersion"
 	compile "org.apache.commons:commons-lang3:$commonsLangVersion"
 	//compile "commons.lang:commons-lang:commonsLangVersion"
-	compile "org.thymeleaf:thymeleaf:$thymeleafSpring4Version"
-	compile "org.thymeleaf:thymeleaf-spring3:$thymeleafSpring4Version"
+	//compile "org.thymeleaf:thymeleaf:$thymeleafVersion"
+	compile "org.thymeleaf:thymeleaf-spring3:$thymeleafVersion"	
 
     compile "javax.servlet:jstl:$jstlVersion"
     providedCompile "javax.servlet:javax.servlet-api:$servletApiVersion"

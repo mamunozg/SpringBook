@@ -69,14 +69,16 @@ public class Spitter {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public Spitter() {}
+
 	public Spitter(String userName, String password, String firstName, String lastName, String email) {		
 		this(null, userName, password, firstName, lastName, email);
 	}
 
 	
 	
-	public Spitter() {}
 			
+	
 	public Spitter(Long id, String userName, String password, String firstName, String lastName, String email) {
 		this.id = id;
 		this.userName = userName;
