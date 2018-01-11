@@ -20,7 +20,7 @@ public class HomeControllerTest {
 	public void testHomePage() throws Exception {
 		HomeController controller = new HomeController();
 		MockMvc mock = standaloneSetup(controller).build();
-		mock.perform(get("/homepage")).andExpect(view().name("home"));
+		mock.perform(get("/")).andExpect(view().name("home"));
 		
 	}
 		

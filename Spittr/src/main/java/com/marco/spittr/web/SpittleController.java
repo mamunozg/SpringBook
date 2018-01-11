@@ -1,6 +1,7 @@
 package com.marco.spittr.web;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,17 +30,17 @@ public class SpittleController {
 	}
 	
 	@RequestMapping(method=RequestMethod.GET)
-	public String spittles(
+	public List<Spittle> spittles(
 			@RequestParam(value="max", defaultValue=MAX_LONG_AS_STRING) long max,
-			@RequestParam(value="count", defaultValue="20") int count,
-			Model model) {
-		model.addAttribute("spittleList",repository.findSpittles(max, count));
-		return "spittles";		
+			@RequestParam(value="count", defaultValue="20") int count) {
+//		model.addAttribute("spittleList",repository.findSpittles(max, count));
+//		return "spittles";
+		return repository.findSpittles(max, count);
 	}
 	
 	
 	@RequestMapping(value="/{spittleId}", method=RequestMethod.GET)	
-	public String spittle(@PathVariable(value="spittleId") long spittleId, Model  model) {
+	public String spittle(@PathVariable("spittleId") long spittleId, Model  model) {
 		
 		Spittle spittle = repository.findOne(spittleId);
 		if(spittle == null) {

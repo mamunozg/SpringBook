@@ -1,11 +1,13 @@
 package com.marco.spittr;
 
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.hibernate.validator.constraints.Email;
+
 
 public class Spitter {
 
@@ -89,11 +91,11 @@ public class Spitter {
 	}
 	@Override
 	public int hashCode() {
-		return HashCodeBuilder.reflectionHashCode(this, new String[] {"firstName", "lastName", "username", "password", "email"});
+		return HashCodeBuilder.reflectionHashCode(this, new String[] {"firstName", "lastName", "userName", "password", "email"});
 	}
 	@Override
 	public boolean equals(Object obj) {
-		return EqualsBuilder.reflectionEquals(this, obj, new String[] { "firstName", "lastName", "username", "password", "email"});
+		return EqualsBuilder.reflectionEquals(this, obj, new String[] { "firstName", "lastName", "userName", "password", "email"});
 	}
 	
 	

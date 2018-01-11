@@ -1,13 +1,10 @@
 package com.marco.spittr.config;
 
-import javax.servlet.MultipartConfigElement;
-import javax.servlet.ServletRegistration.Dynamic;
-
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import com.marco.spittr.web.WebConfig;
 
-public class SpittrWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer{
+public class SpitterWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer{
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
@@ -24,10 +21,10 @@ public class SpittrWebAppInitializer extends AbstractAnnotationConfigDispatcherS
 		return new String[] {"/"};
 	}
 
-	@Override
-	protected void customizeRegistration(Dynamic registration) {
-		registration.setMultipartConfig(new MultipartConfigElement("/tmp/spittr/uploads", 2097152, 4194304, 0));		
-		super.customizeRegistration(registration);
-	}
+//	@Override
+//	protected void customizeRegistration(Dynamic registration) {
+//		registration.setMultipartConfig(new MultipartConfigElement("/tmp/spittr/uploads", 2097152, 4194304, 0));		
+//		super.customizeRegistration(registration);
+//	}
 	
 }

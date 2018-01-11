@@ -47,15 +47,15 @@ public class JdbcSpittleRepository implements SpittleRepository {
 	        new SpittleRowMapper(), id);
 	  }
 
-	  public void save(Spittle spittle) {
-	    jdbc.update(
-	        "insert into Spittle (message, created_at, latitude, longitude)" +
-	        " values (?, ?, ?, ?)",
-	        spittle.getMessage(),
-	        spittle.getTime(),
-	        spittle.getLatitude(),
-	        spittle.getLongitude());
-	  }
+//	  public void save(Spittle spittle) {
+//	    jdbc.update(
+//	        "insert into Spittle (message, created_at, latitude, longitude)" +
+//	        " values (?, ?, ?, ?)",
+//	        spittle.getMessage(),
+//	        spittle.getTime(),
+//	        spittle.getLatitude(),
+//	        spittle.getLongitude());
+//	  }
 
 	  private static class SpittleRowMapper implements RowMapper<Spittle> {
 	    public Spittle mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -67,5 +67,47 @@ public class JdbcSpittleRepository implements SpittleRepository {
 	          rs.getDouble("latitude"));
 	    }
 	  }
+
+	@Override
+	public long count() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<Spittle> findRecent() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Spittle> findRecent(int count) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Spittle save(Spittle spittle) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Spittle> findBySpitterId(long spitterId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Spittle> findSpittles(long max, long count) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
  }

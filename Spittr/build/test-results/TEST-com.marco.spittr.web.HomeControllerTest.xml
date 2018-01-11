@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.marco.spittr.web.HomeControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-10-24T12:00:03" hostname="MAMUNOZGP7W" time="0.984">
+<testsuite name="com.marco.spittr.web.HomeControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-11-17T11:30:42" hostname="MAMUNOZGP7W" time="0.733">
   <properties/>
-  <testcase name="testHomePage" classname="com.marco.spittr.web.HomeControllerTest" time="0.984"/>
+  <testcase name="testHomePage" classname="com.marco.spittr.web.HomeControllerTest" time="0.733"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[oct 24, 2017 2:00:03 PM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping registerHandlerMethod
-INFORMACIÓN: Mapped "{[/homepage || /index || /],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.marco.spittr.web.HomeController.home()
-oct 24, 2017 2:00:03 PM org.hibernate.validator.internal.util.Version <clinit>
-INFO: HV000001: Hibernate Validator 5.3.4.Final
-oct 24, 2017 2:00:03 PM org.springframework.mock.web.MockServletContext log
-INFORMACIÓN: Initializing Spring FrameworkServlet ''
-oct 24, 2017 2:00:03 PM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
-INFORMACIÓN: FrameworkServlet '': initialization started
-oct 24, 2017 2:00:03 PM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
-INFORMACIÓN: FrameworkServlet '': initialization completed in 15 ms
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Nov 17, 2017 12:30:43 PM org.hibernate.validator.internal.util.Version <clinit>
+INFO: HV000001: Hibernate Validator 5.1.2.Final
 ]]></system-err>
 </testsuite>

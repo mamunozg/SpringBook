@@ -1,32 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.marco.spittr.web.SpitterControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-10-24T12:00:04" hostname="MAMUNOZGP7W" time="0.297">
+<testsuite name="com.marco.spittr.web.SpitterControllerTest" tests="3" skipped="0" failures="1" errors="0" timestamp="2017-11-17T11:30:43" hostname="MAMUNOZGP7W" time="0.54">
   <properties/>
-  <testcase name="shouldShowRegistration" classname="com.marco.spittr.web.SpitterControllerTest" time="0.156"/>
-  <testcase name="shouldProcessRegistration" classname="com.marco.spittr.web.SpitterControllerTest" time="0.141"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping registerHandlerMethod
-INFORMACIÓN: Mapped "{[/spitter/register],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.marco.spittr.web.SpitterController.processRegistration(com.marco.spittr.Spitter,org.springframework.validation.Errors)
-oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping registerHandlerMethod
-INFORMACIÓN: Mapped "{[/spitter/register],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.marco.spittr.web.SpitterController.showRegistrationForm()
-oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping registerHandlerMethod
-INFORMACIÓN: Mapped "{[/spitter/{username}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.marco.spittr.web.SpitterController.showSpitter(java.lang.String,org.springframework.ui.Model)
-oct 24, 2017 2:00:04 PM org.springframework.mock.web.MockServletContext log
-INFORMACIÓN: Initializing Spring FrameworkServlet ''
-oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
-INFORMACIÓN: FrameworkServlet '': initialization started
-oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
-INFORMACIÓN: FrameworkServlet '': initialization completed in 0 ms
-oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping registerHandlerMethod
-INFORMACIÓN: Mapped "{[/spitter/register],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.marco.spittr.web.SpitterController.processRegistration(com.marco.spittr.Spitter,org.springframework.validation.Errors)
-oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping registerHandlerMethod
-INFORMACIÓN: Mapped "{[/spitter/register],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.marco.spittr.web.SpitterController.showRegistrationForm()
-oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping registerHandlerMethod
-INFORMACIÓN: Mapped "{[/spitter/{username}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.marco.spittr.web.SpitterController.showSpitter(java.lang.String,org.springframework.ui.Model)
-oct 24, 2017 2:00:04 PM org.springframework.mock.web.MockServletContext log
-INFORMACIÓN: Initializing Spring FrameworkServlet ''
-oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
-INFORMACIÓN: FrameworkServlet '': initialization started
-oct 24, 2017 2:00:04 PM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
-INFORMACIÓN: FrameworkServlet '': initialization completed in 0 ms
-]]></system-err>
+  <testcase name="shouldShowRegistration" classname="com.marco.spittr.web.SpitterControllerTest" time="0.15"/>
+  <testcase name="shouldFailValidationWithNoData" classname="com.marco.spittr.web.SpitterControllerTest" time="0.244"/>
+  <testcase name="shouldProcessRegistration" classname="com.marco.spittr.web.SpitterControllerTest" time="0.145">
+    <failure message="org.springframework.web.util.NestedServletException: Handler processing failed; nested exception is java.lang.ExceptionInInitializerError" type="org.springframework.web.util.NestedServletException">org.springframework.web.util.NestedServletException: Handler processing failed; nested exception is java.lang.ExceptionInInitializerError
+	at org.springframework.web.servlet.DispatcherServlet.triggerAfterCompletionWithError(DispatcherServlet.java:1280)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:958)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:870)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:863)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:837)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:62)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:170)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:137)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:141)
+	at com.marco.spittr.web.SpitterControllerTest.shouldProcessRegistration(SpitterControllerTest.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:86)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:49)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:69)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:355)
+	at org.gradle.internal.concurrent.DefaultExecutorFactory$StoppableExecutorImpl$1.run(DefaultExecutorFactory.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ExceptionInInitializerError
+	at org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator.interpolateExpression(ResourceBundleMessageInterpolator.java:341)
+	at org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator.interpolateMessage(ResourceBundleMessageInterpolator.java:279)
+	at org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator.interpolate(ResourceBundleMessageInterpolator.java:194)
+	at org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator.interpolate(LocaleContextMessageInterpolator.java:50)
+	at org.hibernate.validator.internal.engine.ValidationContext.interpolate(ValidationContext.java:362)
+	at org.hibernate.validator.internal.engine.ValidationContext.createConstraintViolation(ValidationContext.java:271)
+	at org.hibernate.validator.internal.engine.ValidationContext.createConstraintViolations(ValidationContext.java:232)
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateSingleConstraint(ConstraintTree.java:291)
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateConstraints(ConstraintTree.java:133)
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateConstraints(ConstraintTree.java:91)
+	at org.hibernate.validator.internal.metadata.core.MetaConstraint.validateConstraint(MetaConstraint.java:83)
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraint(ValidatorImpl.java:547)
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForDefaultGroup(ValidatorImpl.java:487)
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForCurrentGroup(ValidatorImpl.java:451)
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateInContext(ValidatorImpl.java:403)
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validate(ValidatorImpl.java:206)
+	at org.springframework.validation.beanvalidation.SpringValidatorAdapter.validate(SpringValidatorAdapter.java:108)
+	at org.springframework.validation.DataBinder.validate(DataBinder.java:760)
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.validateIfApplicable(ModelAttributeMethodProcessor.java:161)
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.resolveArgument(ModelAttributeMethodProcessor.java:109)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:79)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:157)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:124)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:749)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:689)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:83)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:938)
+	... 53 more
+Caused by: javax.el.ELException: Provider com.sun.el.ExpressionFactoryImpl not found
+	at javax.el.FactoryFinder.newInstance(FactoryFinder.java:101)
+	at javax.el.FactoryFinder.find(FactoryFinder.java:197)
+	at javax.el.ExpressionFactory.newInstance(ExpressionFactory.java:189)
+	at javax.el.ExpressionFactory.newInstance(ExpressionFactory.java:160)
+	at org.hibernate.validator.internal.engine.messageinterpolation.InterpolationTerm.&lt;clinit&gt;(InterpolationTerm.java:59)
+	... 81 more
+Caused by: java.lang.ClassNotFoundException: com.sun.el.ExpressionFactoryImpl
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at javax.el.FactoryFinder.newInstance(FactoryFinder.java:87)
+	... 85 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[true
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
 </testsuite>
