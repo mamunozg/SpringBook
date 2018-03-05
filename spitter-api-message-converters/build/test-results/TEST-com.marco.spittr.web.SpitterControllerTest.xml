@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.marco.spittr.web.SpitterControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-01-12T09:16:42" hostname="MAMUNOZGP7W" time="0.234">
+  <properties/>
+  <testcase name="shouldShowRegistration" classname="com.marco.spittr.web.SpitterControllerTest" time="0.125"/>
+  <testcase name="shouldProcessRegistration" classname="com.marco.spittr.web.SpitterControllerTest" time="0.109"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Jan 12, 2018 10:16:42 AM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/spitter/{username}/],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.marco.spittr.web.SpitterController.showSpitterProfile(java.lang.String,org.springframework.ui.Model)
+Jan 12, 2018 10:16:42 AM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/spitter/register],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.marco.spittr.web.SpitterController.processRegistration(com.marco.spittr.Spitter,org.springframework.validation.Errors)
+Jan 12, 2018 10:16:42 AM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/spitter/register],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.marco.spittr.web.SpitterController.showRegistration()
+Jan 12, 2018 10:16:42 AM org.springframework.mock.web.MockServletContext log
+INFO: Initializing Spring FrameworkServlet ''
+Jan 12, 2018 10:16:42 AM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
+INFO: FrameworkServlet '': initialization started
+Jan 12, 2018 10:16:42 AM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
+INFO: FrameworkServlet '': initialization completed in 0 ms
+Jan 12, 2018 10:16:42 AM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/spitter/{username}/],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.marco.spittr.web.SpitterController.showSpitterProfile(java.lang.String,org.springframework.ui.Model)
+Jan 12, 2018 10:16:42 AM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/spitter/register],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.marco.spittr.web.SpitterController.processRegistration(com.marco.spittr.Spitter,org.springframework.validation.Errors)
+Jan 12, 2018 10:16:42 AM org.springframework.test.web.servlet.setup.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping registerHandlerMethod
+INFO: Mapped "{[/spitter/register],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.marco.spittr.web.SpitterController.showRegistration()
+Jan 12, 2018 10:16:42 AM org.springframework.mock.web.MockServletContext log
+INFO: Initializing Spring FrameworkServlet ''
+Jan 12, 2018 10:16:42 AM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
+INFO: FrameworkServlet '': initialization started
+Jan 12, 2018 10:16:42 AM org.springframework.test.web.servlet.TestDispatcherServlet initServletBean
+INFO: FrameworkServlet '': initialization completed in 0 ms
+]]></system-err>
+</testsuite>
